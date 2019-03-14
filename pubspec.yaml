@@ -1,0 +1,51 @@
+name: flutter_app
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  english_words: ^3.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+  - images/badge1.png
+  - images/badge2.png
+  - images/bee.png
+  - images/book1.png
+  - images/book2.png
+  - images/book3.png
+  - images/book4.png
+  - images/examination_logo.png
+  - images/head.png
+  - images/index_bottom.png
+  - images/index_logo.png
+  - images/banner1.png
+  - images/my_logo.png
+  - images/read1.png
+  - images/read2.png
+  - images/search.png
+  - images/arrow.png
+  - images/bachelorCap.png
+  - images/capabilityTrajectory.png
+  - images/footer.png
+  - images/footprint.png
+  - images/more.png
+  - images/myCollection.png
+  - images/myhead.png
+  - images/mytop.png
+  - images/setUp.png
