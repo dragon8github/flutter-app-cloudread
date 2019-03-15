@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './My.dart';
+import './Examination.dart';
 import './Utils.dart';
 
 void main() {
@@ -10,13 +11,13 @@ void main() {
         brightness: Brightness.light, //应用程序整体主题的亮度
       ),
       routes: <String, WidgetBuilder>{
-        'My': (BuildContext context) => new My()
+        'My': (BuildContext context) => new My(),
+        'Examination': (BuildContext context) => new Examination(),
       },
       home: new Entry(),
     ),
   );
 }
-
 
 class Entry extends StatelessWidget {
   @override
@@ -37,7 +38,9 @@ class Entry extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 footerItem("images/index_logo.png", "阅读"),
-                footerItem("images/examination_logo.png", "考试"),
+                footerItem("images/examination_logo.png", "考试", () {
+                  Navigator.pushNamed(context, "Examination");
+                }),
                 footerItem("images/my_logo.png", "我的", () {
                   Navigator.pushNamed(context, "My");
                 }),
@@ -273,10 +276,6 @@ class Read extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQuery = MediaQuery.of(context);
-    print(mediaQuery.devicePixelRatio);
-    print(mediaQuery.size.width);
-    print(mediaQuery.size.height);
 
     return Container(
       child: ListView(
