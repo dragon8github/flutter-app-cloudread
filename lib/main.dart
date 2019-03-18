@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './My.dart';
 import './Examination.dart';
 import './Utils.dart';
+import './LoadingPage.dart';
 
 void main() {
   runApp(
@@ -9,12 +10,14 @@ void main() {
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
         brightness: Brightness.light, //应用程序整体主题的亮度
+        primaryColor: Colors.white,
       ),
       routes: <String, WidgetBuilder>{
+        'App': (BuildContext context) => new Entry(),
         'My': (BuildContext context) => new My(),
         'Examination': (BuildContext context) => new Examination(),
       },
-      home: new Entry(),
+      home: new LoadingPage(),
     ),
   );
 }

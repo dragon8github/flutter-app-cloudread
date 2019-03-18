@@ -5,23 +5,26 @@ class My extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: Column(
         children: <Widget>[
           Stack(
             children: <Widget>[
-              Image.asset(
-                'images/mytop.png',
-                width: rem(750),
-                height: rem(577),
+              Container(
+                  width: rem(750),
+                  child: Image.asset(
+                  'images/mytop.png',
+                  height: rem2(577),
+                  fit: BoxFit.fill,
+                ),
               ),
               Positioned(
-                top: rem(134),
+                top: rem2(134),
                 left: 0,
                 right: 0,
                 child: userInfo,
               ),
               Positioned(
-                bottom: rem(50),
+                bottom: rem2(50),
                 left: 0,
                 right: 0,
                 child: userLevel,
@@ -30,7 +33,7 @@ class My extends StatelessWidget {
           ),
           Container(
             // margin: EdgeInsets.all(rem(8.0)),
-            margin: EdgeInsets.only(top: rem(10.0), right: rem(0.0), bottom: rem(0.0), left: rem(0.0)),
+            margin: EdgeInsets.only(top: rem2(10.0), right: rem(0.0), bottom: rem2(0.0), left: rem(0.0)),
             child: Column(
               children: <Widget>[
                 myItem("images/bachelorCap.png", "我的成绩"),
@@ -49,7 +52,7 @@ class My extends StatelessWidget {
 
 Widget myItem(String imgPath, String title) {
   return Container(
-    margin: EdgeInsets.only(top: rem(0.0), right: rem(50.0), bottom: rem(80.0), left: rem(50.0)),
+    margin: EdgeInsets.only(top: rem2(0.0), right: rem(50.0), bottom: rem2(80.0), left: rem(50.0)),
     child: Row(
       children: <Widget>[
         Expanded(
@@ -58,12 +61,12 @@ Widget myItem(String imgPath, String title) {
             children: <Widget>[
               Image.asset(
                 imgPath,
-                height: rem(33),
+                height: rem2(33),
                 width: rem(43),
               ),
               Container(
                 // margin: EdgeInsets.all(rem(8.0)),
-                margin: EdgeInsets.only(top: rem(0.0), right: rem(0.0), bottom: rem(0.0), left: rem(11.0)),
+                margin: EdgeInsets.only(top: rem2(0.0), right: rem(0.0), bottom: rem2(0.0), left: rem(11.0)),
                 child: Text(
                   title,
                   style: TextStyle(
@@ -78,7 +81,7 @@ Widget myItem(String imgPath, String title) {
         ),
         Image.asset(
           'images/more.png',
-          height: rem(36),
+          height: rem2(36),
           width: rem(20),
         ),
       ],
@@ -88,12 +91,12 @@ Widget myItem(String imgPath, String title) {
 
 Widget userLevel = Container(
     margin:
-        EdgeInsets.only(top: 0.0, right: rem(70), bottom: 0.0, left: rem(70)),
+    EdgeInsets.only(top: 0.0, right: rem(70), bottom: 0.0, left: rem(70)),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         Container(
-          height: rem(40),
+          height: rem2(40),
           width: rem(115),
           decoration: new BoxDecoration(
             // 背景颜色
@@ -142,12 +145,12 @@ Widget userInfo = Column(
   children: <Widget>[
     Image.asset(
       'images/myhead.png',
-      height: rem(140),
+      height: rem2(140),
       width: rem(140),
     ),
     Container(
       margin: EdgeInsets.only(
-          top: rem(10.0), right: rem(0.0), bottom: rem(10.0), left: rem(0.0)),
+          top: rem2(10.0), right: rem(0.0), bottom: rem2(10.0), left: rem(0.0)),
       child: Text(
         '许晓晴',
         style: TextStyle(

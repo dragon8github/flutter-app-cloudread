@@ -18,8 +18,8 @@ class Examination extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: rem(0),
-            height: rem(272),
+            bottom: rem2(0),
+            height: rem2(272),
             width: rem(750),
             child: Image.asset(
               'images/exfooterbg.png',
@@ -28,9 +28,9 @@ class Examination extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-                top: rem(80.0),
+                top: rem2(80.0),
                 right: rem(30.0),
-                bottom: rem(0.0),
+                bottom: rem2(0.0),
                 left: rem(30.0)),
             /* 内容区域开始 */
             child: Stack(
@@ -43,33 +43,33 @@ class Examination extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                  top: rem(100),
+                  top: rem2(100),
                   left: rem(110),
                   child: Image.asset(
                     'images/love.png',
                     width: rem(110.0),
-                    height: rem(71.0),
+                    height: rem2(71.0),
                     fit: BoxFit.cover, //图片填充整个父容器
                   ),
                 ),
                 Positioned(
                   right: rem(0),
-                  top: rem(0),
+                  top: rem2(0),
                   child: Image.asset(
                     'images/msg.png',
                     width: rem(28.0),
-                    height: rem(27.0),
+                    height: rem2(27.0),
                     fit: BoxFit.cover, //图片填充整个父容器
                   ),
                 ),
                 Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: rem(155.0)),
+                      margin: EdgeInsets.only(top: rem2(155.0)),
                       child: Column(
                         children: <Widget>[
                           Container(
-                            height: rem(100),
+                            height: rem2(100),
                             decoration: new BoxDecoration(
                               // 背景颜色
                               color: Color.fromRGBO(52, 147, 250, 1),
@@ -91,11 +91,11 @@ class Examination extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            height: rem(845),
+                            height: rem2(895),
                             padding: EdgeInsets.only(
-                                top: rem(40.0),
+                                top: rem2(40.0),
                                 right: rem(0.0),
-                                bottom: rem(0.0),
+                                bottom: rem2(0.0),
                                 left: rem(40.0)),
                             decoration: new BoxDecoration(
                               borderRadius: BorderRadius.only(
@@ -116,9 +116,9 @@ class Examination extends StatelessWidget {
                                 field("images/file.png", "自选书目", "共2本"),
                                 Container(
                                   margin: EdgeInsets.only(
-                                      top: rem(0.0),
+                                      top: rem2(0.0),
                                       right: rem(0.0),
-                                      bottom: rem(30.0),
+                                      bottom: rem2(30.0),
                                       left: rem(40.0)),
                                   child: Text(
                                     '已选 1 本',
@@ -164,21 +164,21 @@ Widget imgBook(String imgPath, String name) {
   return Container(
     // margin: EdgeInsets.all(rem(8.0)),
     margin: EdgeInsets.only(
-        top: rem(0.0), right: rem(30.0), bottom: rem(0.0), left: rem(0.0)),
+        top: rem2(0.0), right: rem(30.0), bottom: rem2(0.0), left: rem(0.0)),
     child: Column(
       children: <Widget>[
         Image.asset(
           imgPath,
           width: rem(134.0),
-          height: rem(174.0),
+          height: rem2(174.0),
           fit: BoxFit.cover, //图片填充整个父容器
         ),
         Container(
           // margin: EdgeInsets.all(rem(8.0)),
           margin: EdgeInsets.only(
-              top: rem(20.0),
+              top: rem2(20.0),
               right: rem(0.0),
-              bottom: rem(0.0),
+              bottom: rem2(0.0),
               left: rem(0.0)),
           child: Text(
             name,
@@ -199,7 +199,7 @@ Widget imgBook(String imgPath, String name) {
 Widget field(String imgPath, String label, String value) {
   return Container(
     margin: EdgeInsets.only(
-        top: rem(0.0), right: rem(0.0), bottom: rem(40.0), left: rem(0.0)),
+        top: rem2(0.0), right: rem(0.0), bottom: rem2(40.0), left: rem(0.0)),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
@@ -209,13 +209,13 @@ Widget field(String imgPath, String label, String value) {
               Image.asset(
                 imgPath,
                 width: rem(30.0),
-                height: rem(30.0),
+                height: rem2(30.0),
               ),
               Container(
                 margin: EdgeInsets.only(
-                    top: rem(0.0),
+                    top: rem2(0.0),
                     right: rem(0.0),
-                    bottom: rem(0.0),
+                    bottom: rem2(0.0),
                     left: rem(10.0)),
                 child: Text(
                   label,
@@ -233,9 +233,9 @@ Widget field(String imgPath, String label, String value) {
         ),
         Container(
           margin: EdgeInsets.only(
-              top: rem(0.0),
+              top: rem2(0.0),
               right: rem(0.0),
-              bottom: rem(0.0),
+              bottom: rem2(0.0),
               left: rem(47.0)),
           child: Text(
             value,
@@ -256,7 +256,7 @@ Widget field(String imgPath, String label, String value) {
 Widget tabButton(String name, Color _color, [Function cb]) {
   return Container(
     width: rem(328.0),
-    height: rem(120.0),
+    height: rem2(120.0),
     child: FlatButton(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(23)),
