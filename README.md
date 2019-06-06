@@ -7,7 +7,6 @@
     <img
       src="https://github.com/dragon8github/flutter-app-cloudread/blob/master/static/1.jpg?raw=true"
       width="100%"
-      height="390"
     />
   </a>
 </p>
