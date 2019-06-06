@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import './Utils.dart';
+import 'package:flutter_app/utils.dart';
 void main() {
   runApp(
     MaterialApp(

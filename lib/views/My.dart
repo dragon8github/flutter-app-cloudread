@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './Utils.dart';
+import '../utils.dart';
 
 class My extends StatelessWidget {
   @override
@@ -10,10 +10,10 @@ class My extends StatelessWidget {
           Stack(
             children: <Widget>[
               Container(
-                  width: rem(750),
-                  child: Image.asset(
+                child: Image.asset(
                   'images/mytop.png',
                   height: rem2(577),
+                  width: rem(750),
                   fit: BoxFit.fill,
                 ),
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import './Utils.dart';
+import '../utils.dart';
 
 class LoadingPage extends StatefulWidget {
   @override

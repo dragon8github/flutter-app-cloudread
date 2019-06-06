@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './Utils.dart';
+import 'package:flutter/cupertino.dart';
+import '../utils.dart';
 
 class Examination extends StatelessWidget {
   @override
@@ -19,11 +20,12 @@ class Examination extends StatelessWidget {
           ),
           Positioned(
             bottom: rem2(0),
+            left: 0,
+            right: 0,
             height: rem2(272),
-            width: rem(750),
             child: Image.asset(
               'images/exfooterbg.png',
-              fit: BoxFit.contain,
+              fit: BoxFit.cover,
             ),
           ),
           Container(
@@ -43,7 +45,7 @@ class Examination extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                  top: rem2(100),
+                  top: rem2(90),
                   left: rem(110),
                   child: Image.asset(
                     'images/love.png',
@@ -65,7 +67,7 @@ class Examination extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: rem2(155.0)),
+                      margin: EdgeInsets.only(top: rem2(145.0)),
                       child: Column(
                         children: <Widget>[
                           Container(
@@ -91,12 +93,11 @@ class Examination extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            height: rem2(895),
                             padding: EdgeInsets.only(
-                                top: rem2(40.0),
+                                top: rem2(30.0),
                                 right: rem(0.0),
-                                bottom: rem2(0.0),
-                                left: rem(40.0)),
+                                bottom: rem2(30.0),
+                                left: rem(30.0)),
                             decoration: new BoxDecoration(
                               borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(13.0),
@@ -119,7 +120,7 @@ class Examination extends StatelessWidget {
                                       top: rem2(0.0),
                                       right: rem(0.0),
                                       bottom: rem2(30.0),
-                                      left: rem(40.0)),
+                                      left: rem(0.0)),
                                   child: Text(
                                     '已选 1 本',
                                     style: TextStyle(
@@ -140,6 +141,26 @@ class Examination extends StatelessWidget {
                                         imgBook("images/book1.png", "西游记"),
                                         imgBook("images/book2.png", "农夫与蛇"),
                                       ],
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(top: rem2(30.0), right: rem(40.0), bottom: rem2(0.0), left: rem(0.0)),
+                                  child: Center(
+                                    child: CupertinoButton(
+                                      child: Text(
+                                        '确定报名',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.white,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                      color: Color.fromRGBO(40,137,241, 1),
+                                      borderRadius: BorderRadius.all(Radius.circular(24.0)), // 按钮圆角设置
+                                      onPressed: () { // onPressed不为null视为可点击
+                                        print('You click the button');
+                                      },
                                     ),
                                   ),
                                 )
@@ -164,7 +185,7 @@ Widget imgBook(String imgPath, String name) {
   return Container(
     // margin: EdgeInsets.all(rem(8.0)),
     margin: EdgeInsets.only(
-        top: rem2(0.0), right: rem(30.0), bottom: rem2(0.0), left: rem(0.0)),
+        top: rem2(0.0), right: rem(20.0), bottom: rem2(0.0), left: rem(0.0)),
     child: Column(
       children: <Widget>[
         Image.asset(
@@ -199,7 +220,7 @@ Widget imgBook(String imgPath, String name) {
 Widget field(String imgPath, String label, String value) {
   return Container(
     margin: EdgeInsets.only(
-        top: rem2(0.0), right: rem(0.0), bottom: rem2(40.0), left: rem(0.0)),
+        top: rem2(0.0), right: rem(0.0), bottom: rem2(30.0), left: rem(0.0)),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
